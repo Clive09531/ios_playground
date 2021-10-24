@@ -30,20 +30,14 @@
                                     <segment title="布"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-1B-3Zi">
-                                <rect key="frame" x="154" y="269" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入姓名以開始遊戲" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnf-6I-ul5">
                                 <rect key="frame" x="109.5" y="64" width="156" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eH1-RR-jUt">
-                                <rect key="frame" x="3" y="217" width="368" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eH1-RR-jUt">
+                                <rect key="frame" x="3" y="155.5" width="293" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-4Y-2Qz">
                                         <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
@@ -52,38 +46,59 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝利者" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm4-NX-da6">
-                                        <rect key="frame" x="99.5" y="0.0" width="69.5" height="20.5"/>
+                                        <rect key="frame" x="74.5" y="0.0" width="69.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我方出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng4-eo-4MB">
-                                        <rect key="frame" x="199" y="0.0" width="69.5" height="20.5"/>
+                                        <rect key="frame" x="149" y="0.0" width="69.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電腦出拳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imH-kC-Tmw">
-                                        <rect key="frame" x="298.5" y="0.0" width="69.5" height="20.5"/>
+                                        <rect key="frame" x="223.5" y="0.0" width="69.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-1B-3Zi">
+                                <rect key="frame" x="161" y="191" width="53" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="猜拳"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sg5-ck-Mz2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZLB-th-a9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1yX-Dq-jaS"/>
+                            <constraint firstItem="3Sg-1B-3Zi" firstAttribute="top" secondItem="eH1-RR-jUt" secondAttribute="bottom" constant="15" id="4fh-Xb-yio"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZLB-th-a9g" secondAttribute="trailing" constant="10" id="7oR-J5-Yoa"/>
                             <constraint firstItem="4ql-tu-bnt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RAi-3y-Piu"/>
                             <constraint firstItem="4ql-tu-bnt" firstAttribute="top" secondItem="Tnf-6I-ul5" secondAttribute="bottom" constant="10" id="TZI-h7-4DY"/>
+                            <constraint firstItem="3Sg-1B-3Zi" firstAttribute="centerX" secondItem="4ql-tu-bnt" secondAttribute="centerX" id="Umq-3w-3qT"/>
                             <constraint firstItem="Tnf-6I-ul5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIn-yV-F5G"/>
                             <constraint firstItem="Tnf-6I-ul5" firstAttribute="top" secondItem="ZLB-th-a9g" secondAttribute="bottom" constant="10" id="evS-YJ-NbS"/>
                             <constraint firstItem="ZLB-th-a9g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g8f-Nj-Oko"/>
+                            <constraint firstItem="eH1-RR-jUt" firstAttribute="top" secondItem="4ql-tu-bnt" secondAttribute="bottom" constant="30" id="mWc-MK-i0A"/>
+                            <constraint firstItem="eH1-RR-jUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="olP-8r-Xsq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mySelectLabel" destination="ng4-eo-4MB" id="FuA-db-7QI"/>
+                        <outlet property="nameField" destination="ZLB-th-a9g" id="3eI-Gm-4Yn"/>
+                        <outlet property="nameLabel" destination="TXt-4Y-2Qz" id="OjQ-qb-BrL"/>
+                        <outlet property="pcSelectLabel" destination="imH-kC-Tmw" id="gCQ-e1-5YQ"/>
+                        <outlet property="textLabel" destination="Tnf-6I-ul5" id="X0l-Cf-N22"/>
+                        <outlet property="userSelectSegment" destination="4ql-tu-bnt" id="X0h-yp-7RO"/>
+                        <outlet property="winnerLabel" destination="Pm4-NX-da6" id="fu8-uF-IsC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
